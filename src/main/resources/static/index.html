@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Board Game Night Planner</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🎲 Board Game Night Planner</h1>
+        <p>Manage your games, friends, and borrowed games</p>
+        <p class="notice">For public demos, use fictional details only. Demo entries are shared and reset when the app restarts.</p>
+    </header>
+
+    <main>
+
+        <!-- Games Section -->
+        <section>
+            <h2>🎮 Games</h2>
+
+            <div class="form">
+                <input type="text" id="title" placeholder="Game Title">
+
+                <input type="number" id="minPlayers" placeholder="Min Players">
+
+                <input type="number" id="maxPlayers" placeholder="Max Players">
+
+                <input type="text" id="complexity" placeholder="Complexity">
+
+                <button onclick="addGame()">Add Game</button>
+            </div>
+
+            <h3>Find Games for Players</h3>
+
+            <input type="number" id="playerFilter"
+                   placeholder="Enter number of players">
+
+            <button onclick="filterGames()">Search</button>
+
+            <div id="gamesList"></div>
+        </section>
+
+
+        <!-- Friends Section -->
+        <section>
+            <h2>👥 Friends</h2>
+
+            <div class="form">
+                <input type="text" id="friendName"
+                       placeholder="Friend Name">
+
+                <input type="text" id="friendContact"
+                       placeholder="Contact">
+
+                <button onclick="addFriend()">Add Friend</button>
+            </div>
+
+            <div id="friendsList"></div>
+        </section>
+
+
+        <!-- Loan Section -->
+        <section>
+            <h2>📚 Loan Log</h2>
+
+            <div class="form">
+
+                <input type="number" id="loanGameId"
+                       placeholder="Game ID">
+
+                <input type="number" id="loanFriendId"
+                       placeholder="Friend ID">
+
+                <input type="date" id="borrowDate">
+
+                <input type="date" id="returnDate">
+
+                <button onclick="addLoan()">Add Loan</button>
+
+            </div>
+
+            <div id="loansList"></div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

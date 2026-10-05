@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: boardgameplanner-demo
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /
+    envVars:
+      - key: SPRING_PROFILES_ACTIVE
+        value: demo

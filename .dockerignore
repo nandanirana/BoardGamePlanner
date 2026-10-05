@@ -1,0 +1,10 @@
+.git
+.github
+.idea
+.vscode
+.mvn
+target
+build
+boardgameplanner-data.mv.db
+boardgameplanner-data.trace.db
+boardgameplanner-data.lock.db
